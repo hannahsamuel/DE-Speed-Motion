@@ -31,18 +31,71 @@ To switch bewteen the high and low state by reading the analog values on a seria
 
 ## Wiring
 
-Now that I had selected my parts, I researched what wire connections needed to be made to supply power to the photointerruper and external leds. 
+Now that I had selected my parts, I researched what wire connections needed to be made to supply power to the photointerruper and external leds. I researched the part number which brought me to the a wiring diagram from the company that manufacture the photointerrupters. I also cross-checked several diagrams to clear any conflicting connections particulary with the "collecter" and "emitter" parts. 
+
+<img width="384" alt="wiring digram" src="https://user-images.githubusercontent.com/90801601/149016879-56ab7543-5ba9-4d0c-8872-df56882e1fb7.PNG">
+<img width="578" alt="wd2" src="https://user-images.githubusercontent.com/90801601/149017030-6ea602cf-44a7-40a2-bb58-d24a55567aaa.PNG">
+
+I started to follow both of these diagrams to wire the photointerrupters and led. I made several revisions to my wiring to add more necessary components for the functionality for the circuit as a whole. Below is some photo documentation of my wiring process. 
 
 ## Code Implementation
+For the coding aspect of the projects, I coded the photo interrupters with analog pins to print analog values on the serial monitor. Then I observed the behavior of the values and determined a borderline value that would determine whethere leds would turn on and off. 
+```
+if (val>10)
+{
+digitalWrite(led, LOW);
+}
+else{
+digitalWrite(led, HIGH);
 
+}
+//if object passed second photointerrupter, visual indication
+if (val2>10)
+{
+digitalWrite(led2, LOW);
+}
+else{
+digitalWrite(led2, HIGH);
+}
+```
 
+Then I used if statement to change the state of the photointerrupter based on whether the analog values were reading above or below the borderline value. Then I used more if statments to calculate the time -using the millis function- between when the program started and when there was a state change.
+```
+ //object detected through first interrupter  -> check and declare timing -> constant changes state
+if(digitalRead(led) == HIGH){
+  timer = millis();
+  constant = 1;
+}
+   //object detected through second interrupter  -> check and declare timing -> constant2 changes state
+if(digitalRead(led2)== HIGH){
+  timer2 = millis();
+  constant2 = 1;
+}
+```
+Once both sensors were calculated I substracted the times and began coding the speed calulations with math operations. Separate from this, I coded the interface pins of the lcd and then coded the arduino to print the final speed calculation on the lcd by setting the cursor which is the location at which the informatino will be printed on the screen. 
 
-
+```
+// Speed Calculation
+ TIME = TIME/1000;
+ speedX=(distance/TIME); //speed = distance/time
+ speedX = speedX*3600;
+ speedX=speedX/1000;
+  //position speed on lcd
+ lcd.setCursor(0, 0);
+ lcd.print("Speed:");
+ lcd.setCursor(0, 1);
+ lcd.print(speedX, 1);
+ lcd.print(" Km/Hr "); //displaying units
+```
 ## Technical Challenges
+
+A challenge I had was using the proper resistor values to pass the correct amount of voltage across the photointerruptors. At first I was using resistor that I had on hand or approximated, but the photointerrupters I was using were sensitive to the voltage being passed so I had to read resistor charts and obtain the correct ohms resistance. On the light emitting end was a 560 ohms resistance and on the light receiving end was a 56k ohms resistor. 
+
+Another challenge I had was reading the analog input from the sensor. The photointerrupters were really sensitive so once you wire them into the board a simple push can mess up the reading values. To get a more accurate reading I would wait about 30 seconds to let the photointerrupter adjust to a consistent pattern of analog values before passing an object between the sensors.
 
 
 ## Final Thoughts
-
+This project helped learn how to wire elctrical components and gather data from them by reading the analog values printed on the serial monitor. Using this information I would manpulate between 2 states to determine the passing of an object. I practiced and further develpoed my skills to code in the Arduino C++ environment as well as understading voltage, current, and resistant laws to produce a desired output. I also learned how to read schematic diagram and reseach sensor part to get the datasheets. 
 
 
 
