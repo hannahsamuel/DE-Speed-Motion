@@ -41,6 +41,9 @@ Now that I had selected my parts, I researched what wire connections needed to b
 ## Technical Challenges
 
 
+## Final Thoughts
+
+
 
 
 
