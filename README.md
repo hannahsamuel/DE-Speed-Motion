@@ -38,6 +38,14 @@ Now that I had selected my parts, I researched what wire connections needed to b
 
 I started to follow both of these diagrams to wire the photointerrupters and led. I made several revisions to my wiring to add more necessary components for the functionality for the circuit as a whole. Below is some photo documentation of my wiring process. 
 
+![lcd](https://user-images.githubusercontent.com/90801601/149179963-f804832e-b016-447a-ab33-15387262159e.PNG)
+
+![cp1](https://user-images.githubusercontent.com/90801601/149180161-38e60926-1c18-430d-b738-fc0906e0e659.PNG)
+
+![cp2](https://user-images.githubusercontent.com/90801601/149180354-f8c66000-79ff-4548-9e1f-e0ce8a471ec6.PNG)
+
+
+
 ## Code Implementation
 For the coding aspect of the projects, I coded the photo interrupters with analog pins to print analog values on the serial monitor. Then I observed the behavior of the values and determined a borderline value that would determine whethere leds would turn on and off. 
 ```
@@ -96,6 +104,9 @@ Another challenge I had was reading the analog input from the sensor. The photoi
 
 ## Final Thoughts
 This project helped learn how to wire elctrical components and gather data from them by reading the analog values printed on the serial monitor. Using this information I would manpulate between 2 states to determine the passing of an object. I practiced and further develpoed my skills to code in the Arduino C++ environment as well as understading voltage, current, and resistant laws to produce a desired output. I also learned how to read schematic diagram and reseach sensor part to get the datasheets. 
+
+https://user-images.githubusercontent.com/90801601/149180920-ced75c09-cdec-49a8-b9e3-6c59fcff9e82.mp4
+
 
 
 
