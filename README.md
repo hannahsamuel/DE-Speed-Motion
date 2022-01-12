@@ -105,7 +105,9 @@ Another challenge I had was reading the analog input from the sensor. The photoi
 ## Final Thoughts
 This project helped learn how to wire elctrical components and gather data from them by reading the analog values printed on the serial monitor. Using this information I would manpulate between 2 states to determine the passing of an object. I practiced and further develpoed my skills to code in the Arduino C++ environment as well as understading voltage, current, and resistant laws to produce a desired output. I also learned how to read schematic diagram and reseach sensor part to get the datasheets. 
 
-https://user-images.githubusercontent.com/90801601/149180920-ced75c09-cdec-49a8-b9e3-6c59fcff9e82.mp4
+
+https://user-images.githubusercontent.com/90801601/149181646-03727f83-2461-4229-a8d4-c1169f8a64c7.mp4
+
 
 
 
