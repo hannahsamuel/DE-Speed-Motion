@@ -6,7 +6,9 @@
 
 <img src="https://user-images.githubusercontent.com/90801601/148887834-06350ebc-516d-4920-b732-1b5d284f3938.png" width="750" height="400">
 <img src="https://user-images.githubusercontent.com/90801601/148888078-2d3ffd5a-c400-4bcd-b3c8-95e3a0ca25cd.png" width="750" height="400">
+
 ## Part Selection
+
 To mimic the effect of the bluetooth detectors and signal, I replicated this behavior using the HY810H photointerrupters that are easier to maniuplate between a HIGH and LOW state to produce a desired response on an led (light emitting diode).
 
 
