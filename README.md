@@ -1,7 +1,7 @@
 # DE End of Course Project: Speed Calculator
 #### By: Hannah Samuel
 ## Introduction
- For my final project in Digital Electronics, I wanted to use my arduino skills to calculate speed of an object moving on a straight path from an inital destination to a final destination. I chose these project because it is very applicable to the movemnt of vechicles on the road today and provides good insight on how to implement more safer guidlines. So this inspired me to create a minituare model of how the the speed of moving object would be calculated. In addition to calculated, I wanted the user to see this information visibly on a platform such as the speed limit signs that conveys the speed of a incoming driver.
+ For my final project in Digital Electronics, I wanted to use my arduino skills to calculate speed of an object moving on a straight path from an inital destination to a final destination. I chose these project because it is very applicable to the movemnt of vechicles on the road today and provides good insight on how to implement more safer guidlines. So this inspired me to create a minituare model of how the the speed of moving object would be calculated. In addition to the calculation, I wanted the user to see this information visibly on a platform such as the speed limit signs that convey the speed of a incoming driver.
  
 
 <img src="https://user-images.githubusercontent.com/90801601/148887834-06350ebc-516d-4920-b732-1b5d284f3938.png" width="750" height="400">
@@ -16,11 +16,11 @@ Photointerrupters are sensors that contain two main parts to it. On one side is 
 
 <img src="https://user-images.githubusercontent.com/90801601/148890374-4695475e-08e0-43ab-b994-ac9a54bd2c81.jpg" width="300" height="300">
 
-When the light passes through, the phototransistor is able to receive current and the internal led lights up. This is created our first state called "low" which means there is a consistent flow of light passed and no interruptions have occured. When you place an object in between the led and phototransistor, the current is blocked creating the second state "high" which tells you that an object had stipped the flow of the led. These two state allow you to pass an object through and convert from one state to the next.
+When the light passes through, the phototransistor is able to receive current and the internal led lights up. This is creates our first state called "low" which means there is a consistent flow of light passed and no interruptions have occured. When you place an object in between the led and phototransistor, the current is blocked creating the second state "high" which tells you that an object had stopped the flow of the led. These two state allow you to pass an object through and convert from one state to the next.
 
 ![photointerrupterdiagram](https://user-images.githubusercontent.com/90801601/148890987-7c6734ad-7024-4b9c-a3e5-d4e1b4d6cb7c.jpg)
 
-To show the results of the speed calculation, I utilized a liquid crystal display that is wried to the breadboard and arduino board to receive power for the interface pins and know what letters and numbers to display on the screen. LCDs are made a liquid crystal but from the human eye we see pixels. The pixels are charges with electric voltage and emit light that we see. By coding the lcd, I could print the speed calculation directly to the scren of the lcd. 
+To show the results of the speed calculation, I utilized a liquid crystal display that is wried to the breadboard and arduino board to receive power for the interface pins and know what letters and numbers to display on the screen. LCDs are made of liquid crystal but from the human eye we see pixels. The pixels are charged with electric voltage and emit light that we see. By coding the lcd, I could print the speed calculation directly to the screen of the lcd. 
 
 <img src="https://user-images.githubusercontent.com/90801601/148893982-3c4b5d01-713c-46c4-b611-64fb446fdfeb.png" width="500" height="300">
 
